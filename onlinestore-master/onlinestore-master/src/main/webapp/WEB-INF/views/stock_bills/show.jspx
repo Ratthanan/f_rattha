@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_roo_team01_domain_Stock_bill" object="${stock_bill}" path="/stock_bills" z="i0hscHyn+jjC1QXV6B1DOCQYGDM=">
+        <field:display field="product_name" id="s_com_roo_team01_domain_Stock_bill_product_name" object="${stock_bill}" z="Yg5XYj1QXsW1i5URHsKT/HbzDCI="/>
+        <field:display field="product_num" id="s_com_roo_team01_domain_Stock_bill_product_num" object="${stock_bill}" z="Z1WGka7uRu2U9YS3qB+DIAYKPUE="/>
+        <field:display field="allproduct_price" id="s_com_roo_team01_domain_Stock_bill_allproduct_price" object="${stock_bill}" z="cUqVZOe6s6HOHq8/xgmkkoCgwb4="/>
+        <field:display field="status" id="s_com_roo_team01_domain_Stock_bill_status" object="${stock_bill}" z="CaumfxdXHBk6SlfjX8/eVm2fO04="/>
+        <field:display field="date_pro" id="s_com_roo_team01_domain_Stock_bill_date_pro" object="${stock_bill}" z="oFNJ5pB0bT8S6PaTqB0FbdEH/os="/>
+    </page:show>
+</div>

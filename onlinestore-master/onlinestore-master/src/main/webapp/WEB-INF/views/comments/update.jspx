@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_roo_team01_domain_Comment" modelAttribute="comment" path="/comments" versionField="Version" z="5hysp5lf4zGYppABOsRbthWlsrY=">
+        <field:input field="text" id="c_com_roo_team01_domain_Comment_text" required="true" z="lzAB7xoUE2oxZ11MUAf3DYG7u2M="/>
+        <field:input field="users" id="c_com_roo_team01_domain_Comment_users" required="true" z="NNZClegz5DVROgR8baVxMkPhzTs="/>
+        <field:select field="post" id="c_com_roo_team01_domain_Comment_post" itemValue="id" items="${posts}" path="/posts" z="2DcK7NBRN/uZ0MaleGr4sUeiLJs="/>
+    </form:update>
+</div>

@@ -1,0 +1,60 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+          xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:spring="http://www.springframework.org/tags">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:url value="/resources/images/DRAFTBG.jpg" var="DRAFTBG" />
+	<html>
+	<body background="${DRAFTBG }"></body>
+		<br></br>
+	  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <a href="http://localhost:8080/team01/stock/all">
+    <button type="button" class="btn btn-default"><b>แสดงประวัติการสั่งชื้อทั้งหมด</b></button>
+  	</a>
+  </div>
+  <div class="btn-group" role="group">
+     <a href="http://localhost:8080/team01/stock/add">
+    <button type="button" class="btn btn-default"><b>เพิ่มประวัติการสั่งชื้อ</b></button>
+  </a>
+  </div>
+  <div class="btn-group hhh" role="group">
+     <a href="http://localhost:8080/team01/stock/edit">
+    <button type="button" class="btn btn-default"><b>แก้ไข/ลบ ประวัติการสั่งชื้อ</b></button>
+  </a>
+  </div>
+  </div>
+	
+	<div class="container">
+ <table class="table table-bordered">
+ <br></br>
+    <thead>
+      <tr>
+		<th><center>เลขที่</center></th>
+        <th><center>รายการสินค้า</center></th>
+        <th><center>จำนวน</center></th>
+        <th><center>ราคารวมสินค้า</center></th>
+ 		<th><center>สถานะ</center></th>
+        <th><center>วันที่สั่งชื้อ</center></th>
+      </tr>
+    </thead>
+    <tbody>
+      <c:forEach var="order" items="${listOrder }">
+      <c:if test="${order.status == true }">
+  	<tr>
+    	<td><center>${order.id}</center></td>
+    	<td><center>${order.product_name}</center></td> 
+    	<td><center>${order.product_num}</center></td> 
+    	<td><center>${order.allproduct_price}</center></td> 
+    	<td><center>สั่งชื้อแล้ว</center></td> 
+    	<td><center>${order.date_pro}</center></td> 
+   </tr>
+   </c:if>
+  </c:forEach>
+    </tbody>
+  </table>
+</div>
+	
+	</html>
+
+</jsp:root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_roo_team01_domain_ReserveData" items="${reservedatas}" z="DCh0IdoJAc/ct+ymWXipY8hUzdc=">
+        <table:table data="${reservedatas}" id="l_com_roo_team01_domain_ReserveData" path="/reservedatas" z="/V4ycuc09htVJhiF7flPzZW1F38=">
+            <table:column id="c_com_roo_team01_domain_ReserveData_cid" property="cid" z="OR2aLEijA7Vtqr5kmjXirPSyOnk="/>
+            <table:column id="c_com_roo_team01_domain_ReserveData_product" property="product" z="R6HK2szIH5xQPb/oF+3+G/Q9Ih0="/>
+            <table:column id="c_com_roo_team01_domain_ReserveData_amount" property="amount" z="ud/aRTVVlLxnrE/Xjs6AmzW+kZY="/>
+            <table:column id="c_com_roo_team01_domain_ReserveData_dates" property="dates" z="6H7Po0trI3LaW/i2nKAc0ui5wlw="/>
+            <table:column id="c_com_roo_team01_domain_ReserveData_status" property="status" z="68Rdo+0A3fPLdlZW16xwuy7lE5w="/>
+            <table:column id="c_com_roo_team01_domain_ReserveData_cstatus" property="cstatus" z="LFm3JCwWzX7vmeSnQrQnYqk8NYY="/>
+        </table:table>
+    </page:list>
+</div>

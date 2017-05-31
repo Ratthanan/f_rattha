@@ -1,0 +1,68 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+          xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:spring="http://www.springframework.org/tags">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:url value="/resources/images/Hand.png" var="hand" />
+<html>
+<head>
+	<title>create</title>
+</head>
+<body>
+
+  <div class="input-group" style="width: 50%">
+    <input type="text" class="form-control input-lg" placeholder="Search" id="products"/>
+    <div class="input-group-btn">
+      <button class="btn btn-danger btn-lg" onclick="findProduct()">
+        <span class="glyphicon glyphicon-search"></span>
+      </button>
+    </div>
+  </div>
+
+<br />
+<br />
+	<div class="row"  id="idProduct">
+	<c:forEach var="pro" items="${listproduct}">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">${pro.name}</div>
+        <div class="panel-body"><img src="${hand}" class="img-responsive" style="width:40%" alt="Image"/></div>
+        <div class="panel-footer">
+        	ราคา  : ${pro.price} ฿ จำนวน  : ${pro.amount} ชิ้น
+        	<a href="http://localhost:8080/team01/kachan/add?pid=${pro.id}&amp;price=${pro.price}&amp;product=${pro.name}&amp;type=buy"><button class="btn btn-primary"  id="${pro.id}">ซื้อ</button></a>
+        	<a href="http://localhost:8080/team01/fluwe/add?pid=${pro.id}&amp;name=${pro.name}"><button  class="btn btn-default"  id="${pro.id}">จอง</button></a>
+        </div>
+      </div>
+    </div>
+    </c:forEach>
+  </div>
+
+<script>
+	function findProduct(){
+	    var products = $('#products').val();
+	    $.ajax({
+	        url: "findproduct",
+	        type: "GET",
+	        data: {
+	        	products : products
+	        },
+	        statusCode: {
+	            200: function(data) {
+	                var obj = JSON.parse(data);
+	                $('#idProduct').empty()
+	                $.each(obj,function(i){
+	                    var newRowContent = "&lt;div class=\"col-sm-4\">&lt;div class=\"panel panel-primary\">&lt;div class=\"panel-heading\">" + obj[i].name + "&lt;/div>&lt;div class=\"panel-body\">&lt;img src=\"${hand}\" class=\"img-responsive\" style=\"width:40%\" alt=\"Image\"/>&lt;/div>&lt;div class=\"panel-footer\">ราคา  :" + obj[i].price + " ฿ จำนวน  :" + obj[i].amount + "ชิ้น&lt;a href=\"http://localhost:8080/team01/kachan/add?pid="+ obj[i].id +"&amp;price="+ obj[i].price +"&amp;product="+obj[i].name+"&amp;type=buy\"> &lt;button class=\"btn btn-primary\">ซื้อ&lt;/button>&lt;/a>&lt;a href=\"http://localhost:8080/team01/fluwe/add?pid="+obj[i].id+"&amp;name="+obj[i].name+"\">&lt;button  class=\"btn btn-default\">จอง&lt;/button>&lt;/a>&lt;/div>&lt;/div>&lt;/div>";
+	                    $(newRowContent).appendTo($('#idProduct'))
+	                })
+	            }
+	
+	        }
+	    });
+	
+	}
+
+</script>
+
+</body>
+</html>
+</jsp:root>

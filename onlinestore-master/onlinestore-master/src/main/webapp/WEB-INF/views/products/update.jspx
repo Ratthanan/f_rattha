@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_roo_team01_domain_Product" modelAttribute="product" path="/products" versionField="Version" z="WQS/QGqro6oCl5oF7+WAZJDthbQ=">
+        <field:input field="name" id="c_com_roo_team01_domain_Product_name" required="true" z="Z627dUq4NckEoLC96mwam6Gk6EQ="/>
+        <field:input field="price" id="c_com_roo_team01_domain_Product_price" required="true" validationMessageCode="field_invalid_number" z="sR/efPzAq/9xZGRC6r4ONXxw9yo="/>
+        <field:input field="detail" id="c_com_roo_team01_domain_Product_detail" z="TlRkbKU9eSoIO+0S/mYjuEc1RVU="/>
+        <field:input decimalMin="1" field="amount" id="c_com_roo_team01_domain_Product_amount" required="true" validationMessageCode="field_invalid_integer" z="ZSaYsnb0StNBgWryAhGhrh49IJc="/>
+        <field:checkbox field="proStatus" id="c_com_roo_team01_domain_Product_proStatus" z="284BmVnbfcoKlnAp9bP5mpsavZw="/>
+    </form:update>
+</div>

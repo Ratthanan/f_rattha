@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+  <definition extends="headpage" name="page1/add">
+    <put-attribute name="body" value="/WEB-INF/views/jedsupha/addPromotion.jspx" />
+  </definition>
+
+
+<definition extends="headpage" name="page1/detal">
+    <put-attribute name="body" value="/WEB-INF/views/jedsupha/detal.jspx" />
+  </definition>
+  
+  <definition extends="headpage" name="page1/promotion">
+    <put-attribute name="body" value="/WEB-INF/views/jedsupha/promotion.jspx" />
+  </definition>
+  
+    <definition extends="headpage" name="page1/allproduct">
+    <put-attribute name="body" value="/WEB-INF/views/jedsupha/allproduct.jspx" />
+  </definition>
+      <definition extends="headpage" name="page1/buypromotion">
+    <put-attribute name="body" value="/WEB-INF/views/jedsupha/buyPromotion.jspx" />
+  </definition>
+	
+</tiles-definitions>

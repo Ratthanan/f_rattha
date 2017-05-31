@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_roo_team01_domain_Payment" object="${payment}" path="/payments" z="dWJBk/oAtcWYdheGUzvOGfKZVWI=">
+        <field:display field="account" id="s_com_roo_team01_domain_Payment_account" object="${payment}" z="6K/F66vitGqyIuF/juRTPP2RBHE="/>
+        <field:display field="dates" id="s_com_roo_team01_domain_Payment_dates" object="${payment}" z="HCjSII4owOxxXEN0ENomecUqeYI="/>
+        <field:display field="times" id="s_com_roo_team01_domain_Payment_times" object="${payment}" z="7pYB0G8usyLwDUrqfSr+mewmfDQ="/>
+        <field:display field="amount" id="s_com_roo_team01_domain_Payment_amount" object="${payment}" z="wRCIM2tZj+b63X4fn3/MSTW+h/g="/>
+        <field:display field="ordered" id="s_com_roo_team01_domain_Payment_ordered" object="${payment}" z="ItHrKeDDaG0QpVSjwPzoN/fJCqE="/>
+        <field:display field="status" id="s_com_roo_team01_domain_Payment_status" object="${payment}" z="3a5H3gEJHhWCD5cxqKZR0FJSIrI="/>
+        <field:display field="sendStatus" id="s_com_roo_team01_domain_Payment_sendStatus" object="${payment}" z="mzbi2txksaJ/zrwh6B0yKD1mBt0="/>
+    </page:show>
+</div>

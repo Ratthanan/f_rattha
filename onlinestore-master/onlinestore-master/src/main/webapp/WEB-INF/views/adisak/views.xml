@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+
+  <definition name="adisak/payment" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/adisak/payment.jspx" />
+  </definition>
+  
+  <definition name="adisak/paymentadmin" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/adisak/paymentadmin.jspx" />
+  </definition>
+  
+  <definition name="adisak/post" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/adisak/post.jspx" />
+  </definition>
+
+</tiles-definitions>

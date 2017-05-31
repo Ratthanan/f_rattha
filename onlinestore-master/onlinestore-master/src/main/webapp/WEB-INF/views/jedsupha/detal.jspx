@@ -1,0 +1,139 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields">
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<jsp:output omit-xml-declaration="yes"/>
+
+
+<html>
+<head>
+<title>123</title>
+
+<script type="text/javascript">
+  
+      function createPro() {
+          var data = $('#addpro').serialize();
+          $.ajax({
+              url: "addpro",
+              type: "POST",
+              data:data,
+
+               async: false,
+              cache: false,
+              success: function(data){
+                var newRowContent = "&lt;div class=\"alert alert-success\">Success!&lt;/div>";
+                  
+                    $("#alertsuccess").html(newRowContent);
+              },
+              error: function(){
+                var newRowContent = "&lt;div class=\"alert alert-danger\">FAIL!&lt;/div>";
+                    $("#alertsuccess").html(newRowContent);
+              }
+          });
+      }
+      
+     
+    </script>
+
+
+
+
+
+</head>
+<body>
+<div id="alertsuccess"></div>
+<div class="btn-group btn-group-justified">
+  <a href="http://localhost:8080/team01/page1/allproduct" class="btn btn-primary">จัดโปรโมชัน</a>
+  <a href="http://localhost:8080/team01/page1/detal" class="btn btn-primary">เพิ่มโปรโมชัน</a>
+</div>
+<br/>
+<form id ="addpro" method="post">
+<table border="0" align="center" width="300" style="width:50%">
+<tr>
+<td>
+<center><font size="16">เพิ่มโปรโมชั่น</font></center>
+
+</td>
+</tr>
+<tr>
+  <td>
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon" id="sizing-addon1"><b>ชื่อโปรโมชั่น</b></span>
+      <input type="text" class="form-control" placeholder="โปรโมชั่น" aria-describedby="sizing-addon1" id="name" name="name"/>
+  </div>
+  <br/>
+  </td>
+</tr>
+
+<tr>
+   <td>
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon" id="sizing-addon1"><b>รายละเอียด</b></span>
+      <input type="text" class="form-control" placeholder="รายละเอียดโปรโมชั่น" aria-describedby="sizing-addon1" id="detail" name="detail"/>
+  </div>
+   <br/>
+  </td>
+</tr>
+
+<tr>
+   <td>
+    <div class="input-group input-group-lg">
+      <span class="input-group-addon" id="sizing-addon1"><b>%</b></span>
+      <input type="text" class="form-control" placeholder="ส่วนลด" aria-describedby="sizing-addon1" id="discount" name="discount"/>
+  </div>
+   <br/>
+  </td>
+</tr>
+
+
+
+<tr>
+  <td align="center"><button type="button" class="btn btn-success" style="width:100" onclick="createPro()">Add</button> 
+  </td>
+</tr>
+
+
+
+</table>
+ </form> 
+
+  <style>
+body  {
+    background-image: url("http://static.weloveshopping.com/shop/magicwallart/HWP-21470.jpg");
+    background-color: #cccccc;
+}
+ </style> 
+
+<br />
+<div style="width: 60%" align="center">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ชื่อ</th>
+        <th>ลด</th>
+        <th>รายระเอียด</th>
+      </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="pro" items="${listpromotion}">
+      <tr>
+        <td>${pro.name}</td>
+        <td>${pro.discount}</td>
+        <td>${pro.detail}</td>
+      </tr>
+    </c:forEach>
+    </tbody>
+  </table>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+</jsp:root>

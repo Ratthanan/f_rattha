@@ -1,0 +1,307 @@
+<jsp:root xmlns:spring="http://www.springframework.org/tags" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8" />
+  <jsp:output omit-xml-declaration="yes" />
+  <spring:url value="/resources/images/noline.jpg" var="login0" />
+  <spring:url value="/resources/images/chaibg.jpg" var="login1" />
+  <spring:url value="/resources/images/noiybg.jpg" var="login2" />
+  <spring:url value="/resources/images/fluwebg.jpg" var="login3" />
+  <spring:url value="/resources/images/ammbg.jpg" var="login4" />
+  <spring:url value="/resources/images/darwbg.jpg" var="login5" />
+  <spring:url value="/resources/images/draftbg1.jpg" var="login6" />
+  
+  <html>
+  <head>
+  	<title>login</title>
+  	  <style>
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+     
+     
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 20px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  </style>
+  	
+  </head>
+ <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+  
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Online Store</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#band">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="http://localhost:8080/team01/user/register">REGISTER</a></li>
+        <li data-toggle="modal" data-target="#myModal"><a href="#">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="${login0}" alt="Online Store" width="1200" height="700"/>     
+      </div>
+      <div class="item">
+        <img src="${login1}" alt="Chaii" width="1200" height="700"/>     
+      </div>
+
+      <div class="item">
+        <img src="${login2}" alt="Noiy" width="1200" height="700"/>      
+      </div>
+    
+      <div class="item">
+        <img src="${login3}" alt="Fluew" width="1200" height="700"/>     
+      </div>
+      
+      <div class="item">
+        <img src="${login4}" alt="Amm" width="1200" height="700"/>     
+      </div>
+
+      <div class="item">
+        <img src="${login5}" alt="Darw" width="1200" height="700"/>      
+      </div>
+    
+      <div class="item">
+        <img src="${login6}" alt="Draft" width="1200" height="700"/>     
+      </div>
+    </div>
+    
+    
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+ 
+ <!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h3>ABOUT OF ME</h3>
+  <p><em>Online store!</em></p>
+  <p>ในปัจจุบันคนเราเริ่ม ซื้อของออนไลน์ มากขึ้น เนื่องจากการเปลี่ยนแปลงพฤติกรรมในสังคม จากอดีตที่ต้องเดินออกจากบ้านเพื่อไปหาซื้อของเข้าบ้าน ก็เปลี่ยนเป็นใช้นิ้วจิ้มคอมพิวเตอร์ไม่กี่ครั้ง หรือ ใช้นิ้วจิ้มมือถือไม่กี่ทีก็สามารถซื้อของที่ต้องการได้แล้ว จากความสะดวกสบายที่เพิ่มขึ้น จึงเป็นเหตุผลสนับสนุนได้ว่า ทำไมปัจจุบันคนจึงหันมา “ซื้อของออนไลน์”
+        แน่นอนว่าการใช้นิ้วไปสัมผัสหน้าจอไม่กี่ครั้ง และรอเพียงไม่นานของก็มาอยู่ในบ้านแล้ว เหนื่อยก็ไม่เหนื่อย เมื่อยก็ไม่เมื่อย แถมยังประหยัดเวลา ซึ่งใครๆก็ต้องการที่จะประหยัดเวลาของตัวเอง และในการซื้อของออนไลน์ มีตัวเลือกมากมายให้ลูกค้าได้เลือกซื้อ สมมุติร้านค้าออนไลน์เอไม่มีสินค้าที่ผู้ซื้อต้องการ ผู้ซื้อก็สามารถไปเลือกซื้อสินค้าที่ร้านค้าออนไลน์บี ร้านค้าออนไลน์ซี ได้อย่างง่ายดาย เพราะในชีวิตจริงหากจะให้ผู้ซื้อไปเดินห้างสิบห้างพร้อมกัน เพื่อค้นหาสินค้าที่ต้องการ พร้อมสำรวจราคาที่ถูกที่สุด ก็คงจะลำบากเกินไป แต่ที่ร้านค้าออนไลน์เพียงแค่อยู่กับที่ก็มีรายละเอียดบอกไว้ทุกอย่าง ผู้ซื้อจึงสามารถเปรียบเทียบคุณสมบัติและราคาแต่ละร้านได้อย่างง่ายดาย 
+        ด้วยเหตุผลทั้งหมดที่กล่าวมานี้ ทำให้ผู้ซื้อมีความสะดวกสบายในการซื้อสินค้าบนโลกออนไลน์มากขึ้น แต่การที่ผู้ซื้อจะสามารถเลือกซื้อ และเปรียบเทียบราคาสินค้าได้อย่างง่ายดายแบบนี้ ในฐานะเจ้าของร้านค้าออนไลน์ อาจต้องทำการสำรวจราคาสินค้าในท้องตลาด มีการอัพเดทสินค้าให้มีรายละเอียดของสินค้า และความน่าสนใจอยู่เสมอ หรืออาจสร้างความแตกต่างให้กับสินค้าของตนเอง เพียงเท่านี้การขายสินค้าในร้านค้าออนไลน์ของท่านก็เป็นไปอย่างง่ายดาย</p>
+  <br/>
+</div>
+
+
+<!-- Container (Contact) -->
+<div id="contact" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Contact</h3>
+    <div class="row" align="center">
+      <p><span class="glyphicon glyphicon-map-marker"></span> Thailand, TH</p>
+      <p><span class="glyphicon glyphicon-phone"></span> Phone: +66 846850845</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: kachan_noi@hotmail.com</p>   
+  	</div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&amp;times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">LOGIN</h4>
+      </div>
+      <div class="modal-body">
+          <table align="center">
+		  <tr>
+		  	<td width="400">
+				  <div class="panel panel-default" style="width: 100%" align="center">
+					  <div class="panel-heading">เข้าสู่ระบบ</div>
+					  <div class="panel-body">
+				    <c:if test="${not empty param.login_error}">
+				      <div class="errors">
+				        <p>
+				         Username และ  Password ไม่ถูกต้อง !!!
+				        </p>
+				      </div>
+				    </c:if>
+				    <c:if test="${empty param.login_error}">
+				      <div class="errors">
+				        <p>
+				         	กรุณาเข้าสู่ระบบก่อนเข้าใช้บริการ 
+				        </p>
+				      </div>
+				    </c:if>
+				    <spring:url value="/resources/j_spring_security_check" var="form_url" />
+				    <form name="f" action="${fn:escapeXml(form_url)}" method="POST">
+				      <div>
+				        <label for="j_username">
+				          <spring:message code="security_login_form_name" />
+				        </label>
+				        <input id="j_username" type='text' name='j_username' style="width:250px" class="form-control" />
+				        <spring:message code="security_login_form_name_message" var="name_msg" htmlEscape="false" />
+				        <script type="text/javascript">
+				          <c:set var="sec_name_msg">
+				            <spring:escapeBody javaScriptEscape="true">${name_msg}</spring:escapeBody>
+				          </c:set>
+				          Spring.addDecoration(new Spring.ElementDecoration({elementId : "j_username", widgetAttrs : {promptMessage: "${sec_name_msg}", required : true}})); 
+				        </script>
+				      </div>
+				      <br />
+				      <div>
+				        <label for="j_password">
+				          <spring:message code="security_login_form_password" />
+				        </label>
+				        <input id="j_password" type='password' name='j_password' style="width:250px" class="form-control" />
+				        <spring:message code="security_login_form_password_message" var="pwd_msg" htmlEscape="false" />
+				        <script type="text/javascript">
+				          <c:set var="sec_pwd_msg">
+				            <spring:escapeBody javaScriptEscape="true">${pwd_msg}</spring:escapeBody>
+				          </c:set>
+				          Spring.addDecoration(new Spring.ElementDecoration({elementId : "j_password", widgetAttrs : {promptMessage: "${sec_pwd_msg}", required : true}})); 
+				        </script>
+				      </div>
+				      <br />
+				      <div class="submit">
+				        <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
+				        <spring:message code="button_submit" var="submit_label" htmlEscape="false" />
+				        <input id="proceed" type="submit" value="Sign In" class="btn btn-default" style="width: 100%"/>
+				      </div>
+				    </form>
+					</div>
+				</div>
+			</td>
+			</tr>
+		</table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+</jsp:root>
+

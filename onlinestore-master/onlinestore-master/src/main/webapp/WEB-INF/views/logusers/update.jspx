@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_roo_team01_domain_LogUser" modelAttribute="logUser" path="/logusers" versionField="Version" z="2mxlYIT48bEBOZBsTMrZtY844KI=">
+        <field:input field="username" id="c_com_roo_team01_domain_LogUser_username" z="94YT3LNPTAv1fm3b1Vu2rFOgxFw="/>
+        <field:input field="password" id="c_com_roo_team01_domain_LogUser_password" z="pt21hbEMPuvelkNtNAOIflQYhLU="/>
+        <field:input field="firstname" id="c_com_roo_team01_domain_LogUser_firstname" z="0ffDxQ6BD6+uaK2dku/Na97NrxM="/>
+        <field:input field="lastname" id="c_com_roo_team01_domain_LogUser_lastname" z="AKEcamzU5psXk4Tch9pwNLK3u/U="/>
+        <field:input field="phone" id="c_com_roo_team01_domain_LogUser_phone" z="SQIZmvU6M97VYfFeYtt7mHEK04s="/>
+        <field:input field="address" id="c_com_roo_team01_domain_LogUser_address" z="pj+QFeSC6QYHQTVso9w3S5RLQxA="/>
+        <field:select field="roles" id="c_com_roo_team01_domain_LogUser_roles" itemValue="id" items="${loguserroles}" multiple="true" path="/loguserroles" z="hURiGDQc4YGjatxqfo9B+CsBHd8="/>
+        <field:checkbox field="enabled" id="c_com_roo_team01_domain_LogUser_enabled" z="jcxTUqsAUigL2YTTUO9Da9kXLtI="/>
+    </form:update>
+</div>

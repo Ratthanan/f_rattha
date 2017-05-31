@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_roo_team01_domain_Customer" modelAttribute="customer" path="/customers" render="${empty dependencies}" z="TS3ZQeMPZQ0qsuTIoqrOH1XIy+c=">
+        <field:input field="userName" id="c_com_roo_team01_domain_Customer_userName" z="k02nECRj7Ajhq5lflN2Ql5Wo+vE="/>
+        <field:input field="password" id="c_com_roo_team01_domain_Customer_password" z="c/Jg13bY4q1WpGb2L8Vj3+MrHAA="/>
+        <field:input field="phone" id="c_com_roo_team01_domain_Customer_phone" min="9" required="true" z="hGxir0PoOR14LZvQAv61g7YbQ/w="/>
+        <field:input field="address" id="c_com_roo_team01_domain_Customer_address" z="/f1ELXzisTJ1Xk4iS1MdRLAn8Yk="/>
+        <field:select field="roles" id="c_com_roo_team01_domain_Customer_roles" itemValue="id" items="${loguserroles}" multiple="true" path="/loguserroles" z="Ew9LIDlgaM9SGtN66p4fh1BKXds="/>
+        <field:checkbox field="enabled" id="c_com_roo_team01_domain_Customer_enabled" z="my0wveQbBl4RWh5+mw3J7jjFSSg="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_roo_team01_domain_Customer" render="${not empty dependencies}" z="yXdcu4y06U83Tvut6bJ1aiKfY4s="/>
+</div>

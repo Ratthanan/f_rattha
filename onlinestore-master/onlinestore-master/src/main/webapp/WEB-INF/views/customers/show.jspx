@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_roo_team01_domain_Customer" object="${customer}" path="/customers" z="zUnSlEofCD7qC1C7aBPaci2rRhs=">
+        <field:display field="userName" id="s_com_roo_team01_domain_Customer_userName" object="${customer}" z="+39FdC4VmeuqETsxz4YaJiDNDJc="/>
+        <field:display field="password" id="s_com_roo_team01_domain_Customer_password" object="${customer}" z="Wz7oGMvINZQElgM7HgPhRm/ifaI="/>
+        <field:display field="phone" id="s_com_roo_team01_domain_Customer_phone" object="${customer}" z="1NjToz2oQJrsHwbWf47lKN9nkQk="/>
+        <field:display field="address" id="s_com_roo_team01_domain_Customer_address" object="${customer}" z="TdW3ljV0Q15I39Eypmft2aYIohM="/>
+        <field:display field="roles" id="s_com_roo_team01_domain_Customer_roles" object="${customer}" z="SMLxQ6G4l9JiL8Zx9W2+P/ILVfU="/>
+        <field:display field="enabled" id="s_com_roo_team01_domain_Customer_enabled" object="${customer}" z="usT3/TicSBMKZiBLms9WkQyJAvA="/>
+    </page:show>
+</div>

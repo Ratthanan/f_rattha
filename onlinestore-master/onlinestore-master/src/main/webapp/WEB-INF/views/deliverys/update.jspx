@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_roo_team01_domain_Delivery" modelAttribute="delivery" path="/deliverys" versionField="Version" z="RIPBuDgaCd+DRQxoyPMVfbDbkvo=">
+        <field:select field="payment" id="c_com_roo_team01_domain_Delivery_payment" itemValue="id" items="${payments}" path="/payments" z="U8sPjGgnskHyS76mEB7bTW+XgTs="/>
+        <field:input field="note" id="c_com_roo_team01_domain_Delivery_note" z="04ZL8/XvdaTXxjsgqdHv5pUFJbk="/>
+        <field:checkbox field="status" id="c_com_roo_team01_domain_Delivery_status" z="d/r3qLJ/u/yq0cL17X/rZrTvcDQ="/>
+    </form:update>
+</div>

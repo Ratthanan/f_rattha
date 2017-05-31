@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_roo_team01_domain_ReserveData" object="${reservedata}" path="/reservedatas" z="8ZCD8bx53yCGwgp/d/rIDViILHA=">
+        <field:display field="cid" id="s_com_roo_team01_domain_ReserveData_cid" object="${reservedata}" z="xaZHJjBAk4widZPPa+rvz5kqb6w="/>
+        <field:display field="product" id="s_com_roo_team01_domain_ReserveData_product" object="${reservedata}" z="V+bZ0lDNUmCMsD9vTeGHeT7txNM="/>
+        <field:display field="amount" id="s_com_roo_team01_domain_ReserveData_amount" object="${reservedata}" z="/6zpOBXxKAsuM3Zxcw+FczT1Aaw="/>
+        <field:display field="dates" id="s_com_roo_team01_domain_ReserveData_dates" object="${reservedata}" z="H14zuN5SLE5oWJnST6gjUC/Nlzo="/>
+        <field:display field="status" id="s_com_roo_team01_domain_ReserveData_status" object="${reservedata}" z="0DEjhIhQFmcKXFMSoF4bDJLyuH8="/>
+        <field:display field="cstatus" id="s_com_roo_team01_domain_ReserveData_cstatus" object="${reservedata}" z="jXzdl5deJIVh+5aLm4ginCud0+4="/>
+    </page:show>
+</div>

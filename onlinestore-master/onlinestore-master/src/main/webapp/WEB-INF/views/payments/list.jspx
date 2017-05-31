@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_roo_team01_domain_Payment" items="${payments}" z="6XJKdnvwFThjPwK+ScIqISDQ40c=">
+        <table:table data="${payments}" id="l_com_roo_team01_domain_Payment" path="/payments" z="nFfw7fxH8SyUKgoz+2tLCHGA8/o=">
+            <table:column id="c_com_roo_team01_domain_Payment_account" property="account" z="z2v++F6u/LSX0TZu7qQMeJMgV+g="/>
+            <table:column id="c_com_roo_team01_domain_Payment_dates" property="dates" z="6l3A87LSdQFaj2Zs7esusQlAVHA="/>
+            <table:column id="c_com_roo_team01_domain_Payment_times" property="times" z="UAPRF99o/MiYGU5KjlS4PkxyNb8="/>
+            <table:column id="c_com_roo_team01_domain_Payment_amount" property="amount" z="0QIszvXoo9zMb4jrlSam9qmEP3E="/>
+            <table:column id="c_com_roo_team01_domain_Payment_ordered" property="ordered" z="P+fjRChtFZgiuzAbhVGZidz0Dng="/>
+            <table:column id="c_com_roo_team01_domain_Payment_status" property="status" z="cMRFFx7FnLpphUjBdc3Fiz11in8="/>
+        </table:table>
+    </page:list>
+</div>

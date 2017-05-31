@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_roo_team01_domain_PreOrder" object="${preorder}" path="/preorders" z="1Kd2mJ2AbiFJ1up1/0l0Ky8xoyI=">
+        <field:display field="name" id="s_com_roo_team01_domain_PreOrder_name" object="${preorder}" z="3g6Lhsr9jhn0SEdmATUzPO3YWPE="/>
+        <field:display field="amount" id="s_com_roo_team01_domain_PreOrder_amount" object="${preorder}" z="YGdDFOlF9m1zqlyxc9wLs6hJoQw="/>
+        <field:display field="dates" id="s_com_roo_team01_domain_PreOrder_dates" object="${preorder}" z="SR8U/ly17r+Y8PmOsE5qEmMEf1Y="/>
+        <field:display field="status" id="s_com_roo_team01_domain_PreOrder_status" object="${preorder}" z="EXZar54AXUSUXFxxGkyPrJcp5Zg="/>
+        <field:display field="uname" id="s_com_roo_team01_domain_PreOrder_uname" object="${preorder}" z="9yvffm79a7GuY4zWqJFeks/33Oo="/>
+    </page:show>
+</div>

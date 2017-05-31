@@ -1,0 +1,441 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+          xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:spring="http://www.springframework.org/tags">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:url value="/resources/images/ktb.png" var="ktb" />
+    <spring:url value="/resources/images/scb.png" var="scb" />
+    <spring:url value="/resources/images/kbank.png" var="kbank" />
+    <spring:url value="/resources/images/phone.png" var="phone" />
+    <spring:url value="/resources/images/gif01.gif" var="gif01" />
+    <spring:url value="/resources/images/gif02.gif" var="gif02" />
+    <spring:url value="/resources/images/gifeiei.gif" var="gifeiei" />
+    <spring:url value="/resources/images/Hand.png" var="hand" />
+    <spring:url value="/resources/images/gif03.gif" var="gif03" />
+    <spring:url value="/resources/images/graphic.gif" var="graphic" />
+    <spring:url value="/resources/images/gif05.gif" var="gif05" />
+    <spring:url value="/resources/images/png.png" var="png" />
+	<spring:url value="/resources/images/call.png" var="call" />
+	<spring:url value="/resources/images/mail.png" var="mail" />
+	<spring:url value="/resources/images/ads.jpg" var="moneytree" />
+	
+
+<html>
+<head>
+
+	
+<style>
+.button {
+    background-color: #ff471a;
+    border: none;
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color:  #33ff33;
+    color: white;
+    border: 1px solid #1aff1a;
+    border-radius: 8px;
+}
+.button2 {border-radius: 8px;}
+
+</style>
+<title>Title of the document</title>
+</head>
+<style type="text/css">
+  
+
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+</style>
+
+<body>
+<img alt="full screen background image" src="${moneytree}" id="full-screen-background-image" />
+<div id="alertsuccess"></div>
+<table border="0" align="center">
+<font size="4">
+<tr>
+	<td>
+	
+	<div class="alert alert-danger" role="alert">
+	<table border="0" align="center">
+		<tr>
+			<td>
+			<font size="5">
+			
+				<img src="${hand}" alt="Mountain View" style="width:60px;height:50px;" /> รายละเอียดการแจ้งชำระเงิน 
+				<c:if test="${error == 1}">
+					ERROR
+				</c:if>
+				</font>
+			</td>
+		</tr>
+	</table>
+
+	</div>
+		
+	</td>
+</tr>
+<tr>
+<td>
+<center>
+<div class="alert alert-warning" role="alert">
+ 
+<form id="formPay" method="post">
+<table border="0" align="center" width="650">
+<br />
+  <tr>
+  	<td width="50"></td>
+  	<td width="170">
+  	<c:set var="orid" value = "${pageContext['request'].getParameter('orid')}" />
+  		เลขที่ใบสั่งซื้อ :
+  	</td>
+  	  	
+   <td>
+    <input type="text" class="form-control" id="ordered" name="ordered" placeholder="รหัส" style="width: 50%" value="${orid}"/>
+   </td>
+
+  </tr>
+<tr>
+	<td>
+		<br />
+	</td>
+</tr>
+  <tr valign="top">
+  	<td></td>
+    <td>บัญชีที่โอนเงิน :</td>
+  		 <td >
+  		 	
+				<font size="3">
+				<table border="0">
+    				
+    				
+    				<tr>
+    				<td style="width: 40%">
+    				  <input type="radio" name="account" id="account" value="ktb" /> 
+    				  <img src="${ktb}" alt="Mountain View" style="width:30px;height:30px;" />
+    				  ธ.กรุงไทย	   <br />
+    				 </td>
+    				
+    				 <td>
+    					เลขที่บัญชี 0123456789 KTB<br />
+    				</td>
+    				
+				 </tr>
+    				 <tr>
+    				 <td>
+    				  <input type="radio" name="account" id="account" value="scb" /> 
+    				  <img src="${scb}" alt="Mountain View" style="width:29px;height:29px;" />
+    				  ธ.ไทยพาณิชย์	<br />
+    				 </td>
+    					<td>
+    					เลขที่บัญชี 0123456789 SCB <br />
+    					</td>
+    				</tr>
+    				
+    				<tr>
+    				<td>
+    				  <input type="radio" name="account" id="account" value="kbank" />
+    				   <img src="${kbank}" alt="Mountain View" style="width:30px;height:30px;" />
+
+    				   ธ.กสิกรไทย	 <br />
+    				 </td>
+    				 <td>
+    					เลขที่บัญชี 0123456789 KBANK<br />
+    				</td>
+    				</tr>
+
+    				
+    				
+    				
+    				</table>
+    				
+			</font>
+  		 </td>
+   
+  </tr>
+<tr>
+	<td>
+		<br />
+	</td>
+</tr>
+  <tr>
+  	<td></td>
+  	<td>
+  		วันที่ชำระเงิน :
+  	</td>
+  	    <td>
+ 		<div>
+   		 	<!-- <input type="date" id="dates" name="dates" class="form-control" style="width: 50%" /> -->
+   		 	<input type="text" class="form-control" id="dates" name="dates" placeholder="dd/mm/yyyy" style="width: 50%" />
+  		</div>
+	</td>
+  </tr>
+<tr>
+	<td>
+		<br />
+	</td>
+</tr>
+
+  <tr>
+  	<td></td>
+    <td>เวลาที่โอน:</td>
+
+   	<td>
+   	 <select name="timehr" id="timehr">
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select>
+ชม.
+   <select name="times" id="times">
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option value="59">59</option>
+</select>
+	นาที<br />
+   </td>
+
+  </tr>
+<tr>
+	<td>
+		<br />
+	</td>
+</tr>
+
+  <tr>
+  	<td></td>
+    <td>จำนวนเงินที่โอน :</td>
+   	 <td>
+   	 	<div>
+
+  		<table  border="0">
+  		<tr>
+  			<td>
+ 		 <input type="text" class="form-control" id="amount" name="amount" placeholder="00.00" style="width: 95%" />
+ 		 </td>
+ 		 <td>
+ 		 	บาท
+ 		 </td>
+ 		 </tr>
+  		</table>
+  		</div>
+   	 </td>
+   	 
+  </tr>
+
+ <tr>
+	<td>
+		<br />
+	</td>
+</tr>
+
+  <tr>
+  	<td width="20"></td>
+    <td>
+
+    </td>
+ 	  <td>
+ 	  	<button class="button button1" type="submit" onclick="createPay()">บันทึก</button>
+ 	  	<button class="button button2" type="reset">ยกเลิก</button>
+ 	  </td>
+    
+  </tr>
+  <tr>
+	<td>
+		<br />
+	</td>
+</tr>
+
+<tr>
+  	<td width="20"></td>
+    <td >
+		*** หมายเหตุ :
+    </td>
+ 	  <td>
+ 	  <img src="${gif03}" alt="Mountain View" style="width:20px;height:20px;" />
+ 	  	 กรุณากรอกรายละเอียดให้ครบและถูกต้องก่อนกด บันทึก  <img src="${png}" alt="Mountain View" style="width:25px;height:25px;" />
+ 	  </td>
+    
+  </tr>
+
+</table>
+</form>
+</div>
+</center>
+</td>
+</tr>
+</font>
+<tr>
+
+	<td>
+	
+	
+	<div class="alert alert-warning" role="alert">
+	<table border="0" align="center">
+		<tr>
+			<td>
+			<font size="2">
+			
+			สามารถสอบถามรายละเอืยดเพิ่มเติมได้ที่ 
+			<img src="${mail}" alt="Mountain View" style="width:20px;height:20px;" /> : riku_noiy@hotmail.com
+			<img src="${call}" alt="Mountain View" style="width:20px;height:20px;" /> : 09-1015-3044
+			<br />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			<img src="${gif02}" alt="Mountain View" style="width:29px;height:29px;" />
+			
+			
+			
+				</font>
+			</td>
+		</tr>
+	</table>
+
+	</div>
+		
+	</td>
+</tr>
+</table>
+<script type="text/javascript">
+	    function createPay() {
+	        var data = $('#formPay').serialize();
+	        $.ajax({
+	            url: "createPay",
+	            type: "POST",
+	            data:data,
+	            async: false,
+	            cache: false,
+	            success: function(data){
+	            	var newRowContent = "&lt;div class=\"alert alert-success\">Success!&lt;/div>";
+                    $("#alertsuccess").html(newRowContent);
+	            },
+	            error: function(){
+	            	var newRowContent = "&lt;div class=\"alert alert-danger\">FAIL!&lt;/div>";
+                    $("#alertsuccess").html(newRowContent);
+	            }
+	        });
+	    }
+	</script>
+</body>
+
+</html>
+
+
+</jsp:root>

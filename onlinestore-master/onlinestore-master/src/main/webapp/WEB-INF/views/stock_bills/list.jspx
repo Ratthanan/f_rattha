@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_roo_team01_domain_Stock_bill" items="${stock_bills}" z="w+Lwj5VmEFtYAbCqsi+cSN2trJI=">
+        <table:table data="${stock_bills}" id="l_com_roo_team01_domain_Stock_bill" path="/stock_bills" z="8F0OwdJ/RorWVbDrm8HtGzyhWw0=">
+            <table:column id="c_com_roo_team01_domain_Stock_bill_product_name" property="product_name" z="Z8c54c5NL1kRjwsDc2Sa0wPMMKI="/>
+            <table:column id="c_com_roo_team01_domain_Stock_bill_product_num" property="product_num" z="xrL9I76kIVINdQN/GMhQlrEzgn8="/>
+            <table:column id="c_com_roo_team01_domain_Stock_bill_allproduct_price" property="allproduct_price" z="UCytI7EuR9WWHhGZP9ijehpeMw8="/>
+            <table:column id="c_com_roo_team01_domain_Stock_bill_status" property="status" z="THyJClsUTzDtsPtBa9NSWfceGo0="/>
+            <table:column id="c_com_roo_team01_domain_Stock_bill_date_pro" property="date_pro" z="b+itv6NDrMAmHH0HguM98dNToGY="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,164 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+          xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:spring="http://www.springframework.org/tags">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:url value="/resources/images/mon01.jpg" var="moneytree" />
+
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+<style type="text/css">
+  
+
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+</style>
+<body>
+<script type="text/javascript">
+		function checkPayment(idPayment){
+	        $.ajax({
+	            url: "checkPayment",
+	            type: "GET",
+	            data: {
+	            	idPayment: idPayment.id
+	            },
+	            async: false,
+	            cache: false,
+	            success: function(data){
+	                location.reload()
+	            }
+	        });
+	    }
+		function warningPayment(idPayment){
+	        $.ajax({
+	            url: "warningPayment",
+	            type: "GET",
+	            data: {
+	            	idPayment: idPayment.id
+	            },
+	            async: false,
+	            cache: false,
+	            success: function(data){
+	                location.reload()
+	            }
+	        });
+	    }
+</script>
+<img alt="full screen background image" src="${moneytree}" id="full-screen-background-image" />
+<div class="alert alert-danger" role="alert">
+<font size="5">
+	<table border="0" style="width: 100%" align="center">
+		<tr>
+		
+			<td align="center">
+				ตรวจสอบรายการแจ้งชำระเงิน
+			</td>
+		
+		</tr>
+
+	</table>
+</font>
+</div>	
+ <div class="container">
+           
+  <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>เลขที่ใบสั่งซื้อ</th>
+        <th>บัญชีที่โอนเงิน</th>
+        <th>วันที่โอนเงิน</th>
+        <th>เวลาที่โอน</th>
+        <th>จำนวนเงินที่โอน</th>
+        <th>สถานะตรวจสอบ</th>
+       
+      </tr>
+    </thead>
+    
+    <tbody id="idPayment">
+    <c:forEach var="pay" items="${listpayment}">
+    <c:if test="${pay.status == false}">
+    <c:if test="${pay.ordered.status == true}">
+    	<c:if test="${pay.ordered.warringStatus == false}">
+      <tr>
+        <td>${pay.ordered.customer.userName}</td>
+        <td>${pay.ordered.id}</td>
+        <td>${pay.account}</td>
+        <td>${pay.dates}</td>
+        <td>${pay.times}</td>
+        <td>${pay.amount}</td>
+        <td><input type='button' id="${pay.id}" class="btn btn-success" onclick="checkPayment(this)" value="ถูกต้อง"/>
+        <input type='button' id="${pay.id}" class="btn btn-danger" onclick="warningPayment(this)" value="ผิดพลาด"/>
+        </td>     
+      </tr>
+      </c:if>
+     </c:if>
+     </c:if>
+     </c:forEach>
+    </tbody>
+    
+  </table>
+  <br />
+  <br />
+  
+    <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>เลขที่ใบสั่งซื้อ</th>
+        <th>บัญชีที่โอนเงิน</th>
+        <th>วันที่โอนเงิน</th>
+        <th>เวลาที่โอน</th>
+        <th>จำนวนเงินที่โอน</th>
+        <th>สถานะตรวจสอบ</th>
+       
+      </tr>
+    </thead>
+    
+    <tbody id="idPayment">
+    <c:forEach var="pay" items="${listpayment}">
+    <c:if test="${pay.status == true}">
+    <c:if test="${pay.ordered.status == true}">
+    	<c:if test="${pay.ordered.warringStatus == false}">
+      <tr  class="success">
+        <td>${pay.ordered.customer.userName}</td>
+        <td>${pay.ordered.id}</td>
+        <td>${pay.account}</td>
+        <td>${pay.dates}</td>
+        <td>${pay.times}</td>
+        <td>${pay.amount}</td>
+        <td><b><center><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></center></b></td>     
+      </tr>
+      </c:if>
+     </c:if>
+     </c:if>
+     </c:forEach>
+    </tbody>
+    
+  </table>
+</div>
+
+</body>
+</html>
+
+
+</jsp:root>

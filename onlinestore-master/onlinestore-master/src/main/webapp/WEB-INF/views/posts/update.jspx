@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_roo_team01_domain_Post" modelAttribute="post" path="/posts" versionField="Version" z="tHoTmfzltQyygDjkG+b3sLlPKqo=">
+        <field:input field="text" id="c_com_roo_team01_domain_Post_text" required="true" z="T83RIkuHIaNDE1zoyy/F2tYtKk0="/>
+        <field:input field="users" id="c_com_roo_team01_domain_Post_users" required="true" z="mifuoJHHGJSAy54YGRU9ijDs1iQ="/>
+    </form:update>
+</div>

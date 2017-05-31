@@ -1,0 +1,79 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields">
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<jsp:output omit-xml-declaration="yes"/>
+
+<html>
+<head>
+	<title>allproduct</title>
+</head>
+<body>
+<div class="btn-group btn-group-justified">
+  <a href="http://localhost:8080/team01/page1/allproduct" class="btn btn-primary">จัดโปรโมชัน</a>
+  <a href="http://localhost:8080/team01/page1/detal" class="btn btn-primary">เพิ่มโปรโมชัน</a>
+</div>
+<h4>สินค้า</h4>
+<br />
+<div style="width: 60%" align="center">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ชื่อ</th>
+        <th>ราคา</th>
+        <th>จำนวน</th>
+        <th>ข้อมูล</th>
+        <th>จัดโปรโมชัน</th>
+      </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="pro" items="${listproduct}">
+      <tr>
+        <td>${pro.name}</td>
+        <td>${pro.price}</td>
+        <td>${pro.amount}</td>
+        <td>${pro.detail}</td>
+        <td>
+	        <a href="http://localhost:8080/team01/page1/add?pid=${pro.id}&amp;pname=${pro.name}">
+	        	<button class="btn btn-primary">จัดโปรโมชัน</button>
+	        </a>	
+		</td>
+      </tr>
+    </c:forEach>
+    </tbody>
+  </table>
+
+</div>
+
+<hr size="3"/>
+<h4>โปรโมชันที่มีอยู่</h4>
+<br />
+<div style="width: 60%" align="center">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>สินค้า</th>
+        <th>โปรโมชัน</th>
+        <th>ส่วนลด</th>
+        <th>รายระเอีด</th>
+      </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="pro" items="${listadd}">
+      <tr>
+        <td>${pro.product.name}</td>
+        <td>${pro.promotion.name}</td>
+        <td>${pro.promotion.discount}</td>
+        <td>${pro.promotion.detail}</td>
+      </tr>
+    </c:forEach>
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>
+
+</jsp:root>

@@ -1,0 +1,153 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+          xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles" xmlns:spring="http://www.springframework.org/tags" 
+          xmlns:util="urn:jsptagdir:/WEB-INF/tags/util">
+
+	<jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat" />
+	
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />  
+	<jsp:directive.page pageEncoding="UTF-8" /> 
+	<spring:url value="/resources/images/sungdi.jpg" var="sungdi" />
+
+<html>  
+			
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />	
+		  <meta name="viewport" content="width=device-width, initial-scale=1" />
+			
+		<util:load-scripts />
+		
+		<spring:message code="application_name" var="app_name" htmlEscape="false"/>
+		<title><spring:message code="welcome_h3" arguments="${app_name}" /></title>
+		<style>
+		  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+		  .affix {
+		      top: 0;
+		      width: 100%;
+		  }
+		
+		  .affix + .container-fluid {
+		      padding-top: 70px;
+		  }
+		    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+		    
+		    .navbar {
+		      margin-bottom: 50px;
+		      border-radius: 0;
+		    }
+		    
+		    /* Remove the jumbotron's default bottom margin */ 
+		     .jumbotron {
+		      margin-bottom: 0;
+		     /*  background-image: url("${sungdi}"); */
+		    }
+
+		    /* Add a gray background color and some padding to the footer */
+		 </style>
+
+	</head>
+	
+  	<body style="background:#F0FFF0">
+  	<c:if test="${pageContext['request'].userPrincipal != null}">
+			<img src="${sungdi}" style="width: 100%" valign="top"/>
+	</c:if>  
+		<c:set var="string" value="${pageContext['request'].userPrincipal}" />
+		<c:set var="in3" value="${fn:indexOf(string, 'Granted Authorities:')}" />
+		<c:set var="in4" value="${fn:indexOf(string, ';Credentials')}" />
+	    <c:set var="string2" value="${fn:substring(string, in3+20, in4-2)}" />
+	    <c:set var="role" value="${fn:substringBefore(string2, ';')}" />
+	  
+<c:if test="${fn:length(role) == 10}">			
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		      <a class="navbar-brand" href="#">ONLINE STORE</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li><a href="http://localhost:8080/team01/page1/promotion">โปรโมชัน</a></li>
+		        <li><a href="http://localhost:8080/team01/kachan/create">สินค้า</a></li>
+		        <li><a href="http://localhost:8080/team01/fluwe/show">ตรวจสอบการจอง</a></li>
+		        <li><a href="http://localhost:8080/team01/kachan/show">แจ้งชำระเงิน</a></li>
+		        <li><a href="http://localhost:8080/team01/amm/viewUser">เช็คการจัดส่ง</a></li>
+		        <li><a href="http://localhost:8080/team01/fluwe/padd">พรีออเดอร์</a></li>
+		        <li><a href="http://localhost:8080/team01/fluwe/pshow">ดูพรีออเดอร์</a></li>
+		        <li><a href="http://localhost:8080/team01/adisak/post">ถาม-ตอบ</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+				<c:set var="string" value="${pageContext['request'].userPrincipal}" />
+				<c:set var="in1" value="${fn:indexOf(string, 'Username:')}" />
+				<c:set var="in2" value="${fn:indexOf(string, 'Password:')}" />
+			    <c:set var="username" value="${fn:substring(string, in1+9, in2-2)}" />
+		        <li><a href="#"><span class="glyphicon glyphicon-user"></span>${username}</a></li>
+		        <c:if test="${pageContext['request'].userPrincipal != null}">
+		        <li>
+					      <spring:url value="/resources/j_spring_security_logout" var="logout"/>
+					      <a href="${logout}">
+					        Logout
+					      </a>
+		        </li>
+		        </c:if>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+</c:if>
+<c:if test="${fn:length(role) == 11}">			
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		      <a class="navbar-brand" href="#">ONLINE STORE</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li><a href="http://localhost:8080/team01/fluwe/showadmin">รายการจอง</a></li>
+		        <li><a href="http://localhost:8080/team01/adisak/paymentadmin">รายการแจ้งชำระ</a></li>
+		        <li><a href="http://localhost:8080/team01/amm/add">แจ้งการส่งสินค้า</a></li>
+		        <li><a href="http://localhost:8080/team01/page1/allproduct">จัดโปรโมชัน</a></li>
+		        <li><a href="http://localhost:8080/team01/pro/add">จัดการสินค้า</a></li>
+		        <li><a href="http://localhost:8080/team01/stock/add">สต็อกสินค้า</a></li>
+		        <li><a href="http://localhost:8080/team01/fluwe/pshow_admin">ดูพรีออเดอร์</a></li>
+		        <li><a href="http://localhost:8080/team01/adisak/post">ถาม-ตอบ</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+				<c:set var="string" value="${pageContext['request'].userPrincipal}" />
+				<c:set var="in1" value="${fn:indexOf(string, 'Username:')}" />
+				<c:set var="in2" value="${fn:indexOf(string, 'Password:')}" />
+			    <c:set var="username" value="${fn:substring(string, in1+9, in2-2)}" />
+		        <li><a href="#"><span class="glyphicon glyphicon-user"></span>${username}</a></li>
+		        <c:if test="${pageContext['request'].userPrincipal != null}">
+		        <li>
+					      <spring:url value="/resources/j_spring_security_logout" var="logout"/>
+					      <a href="${logout}">
+					        Logout
+					      </a>
+		        </li>
+		        </c:if>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+</c:if>
+
+   		<div> 
+		    <div id="main" align="center" class="container">
+	    		<tiles:insertAttribute name="body"/> 
+		    </div>
+		</div><br /><b />
+			
+	</body>
+</html>
+</jsp:root>

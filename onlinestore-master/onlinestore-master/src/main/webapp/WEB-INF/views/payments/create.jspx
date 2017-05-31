@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_roo_team01_domain_Payment" modelAttribute="payment" path="/payments" render="${empty dependencies}" z="eEfs9EhuYn9Eq5Ht/u9QsnjOowQ=">
+        <field:input field="account" id="c_com_roo_team01_domain_Payment_account" required="true" z="ft0ZRa/MXag//uvv5B3Y4kew5mc="/>
+        <field:input field="dates" id="c_com_roo_team01_domain_Payment_dates" required="true" z="hepTLI1niufw1/zt7bWChdARndI="/>
+        <field:input field="times" id="c_com_roo_team01_domain_Payment_times" required="true" z="eJJXNoeOPosu52ojpm02Bi+oRN4="/>
+        <field:input field="amount" id="c_com_roo_team01_domain_Payment_amount" required="true" validationMessageCode="field_invalid_number" z="MFKw8PF+/gKk/9bRtXt6lQY6LuU="/>
+        <field:select field="ordered" id="c_com_roo_team01_domain_Payment_ordered" itemValue="id" items="${ordereds}" path="/ordereds" z="JWB1Y4wKuVEEI48a8beAppisjkM="/>
+        <field:checkbox field="status" id="c_com_roo_team01_domain_Payment_status" z="a8aLHtvhg3CL/3/K0uWqRIJnBa4="/>
+        <field:checkbox field="sendStatus" id="c_com_roo_team01_domain_Payment_sendStatus" z="iMfTjY/IcUoCdOFVNyUmxUCLNc0="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_roo_team01_domain_Payment" render="${not empty dependencies}" z="kB2ECX8BYVqNLyAdlO+7xEh01vU="/>
+</div>

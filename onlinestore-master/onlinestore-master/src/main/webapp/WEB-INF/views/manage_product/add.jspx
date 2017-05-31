@@ -1,0 +1,62 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+          xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <html>
+<head>
+
+	<title>add-Product</title>
+
+</head>
+<body>
+<b>
+<div style="width: 60%" align="center">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ชื่อ</th>
+        <th>ราคา</th>
+        <th>จำนวน</th>
+        <th>ข้อมูล</th>
+      </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="pro" items="${listproduct}">
+      <tr>
+        <td>${pro.name}</td>
+        <td>${pro.price}</td>
+        <td>${pro.amount}</td>
+        <td>${pro.detail}</td>
+      </tr>
+    </c:forEach>
+    </tbody>
+  </table>
+
+</div>
+</b>
+<!-- 	
+	<script type="text/javascript">
+	    function createProduct() {
+	        var data = $('#formProduct').serialize();
+	        $.ajax({
+	            url: "createProduct",
+	            type: "POST",
+	            data: data,
+	            async: false,
+	            cache: false,
+	            success: function(data){
+	            	var newRowContent = "&lt;div class=\"alert alert-success\">Success!&lt;/div>";
+                    $("#alertsuccess").html(newRowContent);
+	            },
+	            error: function(){
+	            	var newRowContent = "&lt;div class=\"alert alert-danger\">FAIL!&lt;/div>";
+                    $("#alertsuccess").html(newRowContent);
+	            }
+	        });
+	    }
+    </script> -->
+</body>
+</html>
+    </jsp:root>

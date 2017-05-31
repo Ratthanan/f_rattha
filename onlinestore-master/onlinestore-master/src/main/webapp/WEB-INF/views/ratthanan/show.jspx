@@ -1,0 +1,207 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" xmlns="http://www.w3.org/1999/xhtml" version="2.0"
+          xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+          xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+<html>
+<head>
+  <title>xxx</title>
+
+
+<style type="text/css">
+  
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+
+.button7{
+
+    display: inline-block;
+    border: 5px solid #FFF8DC;
+    padding: 10px 20px;
+    color: #fff;
+-   text-decoration: none;  
+    font-size: 50px;
+    
+
+
+
+  }
+  .button7:hover{
+
+    background: #fff;
+    color: #000;
+  }
+
+.demo {
+  font-family: "palatino linotype", palatino, serif;
+  font-size: 19px;
+  color: #53FF40;
+  font-style: italic;
+  font-weight: bold;
+  font-variant: normal;
+  text-align: left;
+  letter-spacing: 1.2px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.tb5 {
+
+  border:2px solid #eec111;
+  border-radius:10px;
+  height: 22px;
+  width: 230px;
+  background: #eec111;
+  color: #123456;
+  
+
+}
+
+.button5 {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius:10px;
+    width: 150px;
+    height: 50px;
+}
+
+.button5:hover{
+background: black;  
+color: green;
+}
+
+.button55 {
+    background-color: red; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius:10px;
+     width: 150px;
+    height: 50px;
+}
+
+.button55:hover{
+  background: blue;
+  color: red;
+}
+
+
+.m1{
+  width: 230px;
+  border-radius:10px;
+  font-size: 15px;
+}
+
+
+.m2{
+
+background: #eec111;
+border-radius:20px;
+width: 500px;
+height: 100px
+padding:10px 10px;
+text-align: center;
+font-size: 30px;
+
+
+}
+
+::-webkit-input-placeholder {
+   color: black;
+}
+
+table, th, td {
+    border: 3px solid white;
+    border-collapse: collapse;
+    font-size: 20px;
+    color: #FFFFCC;
+    text-align: center;
+    padding: 5px 7px;
+    
+    
+}
+
+.t1{
+  display: inline-block;
+  border: 5px solid #FFF8DC;
+    padding: 10px 20px;
+    color: #CCFFCC;
+-   text-decoration: none;  
+    font-size: 50px;
+    border-radius:60px;
+}
+
+
+</style>
+
+</head>
+<body>
+<img alt="full screen background image" src="http://www.non-solo-arte.com/images/cat-desktop-background-grey.jpg" id="full-screen-background-image" />
+
+<div class="t1"><b>RESULT RESERVE MENU</b></div>
+<br /><br /><br />
+
+
+<table style="width:100%">
+  <tr>
+    <th >Reserve No.</th>
+     <th>Name.</th>
+    <th> Product</th> 
+    <th>Amount</th>
+    <th>Date</th>
+      
+  </tr>
+  <c:forEach var="order" items="${data}">
+  <tr>
+  
+    <td>${order.id}</td>
+    <td>${order.cid.userName}</td>
+    <td>${order.product.name}</td>
+    <td>${order.amount}</td>
+    <td>${order.dates}</td> 
+    
+    
+  </tr>
+  </c:forEach>
+  
+</table>
+
+
+</body>
+</html>
+</jsp:root>

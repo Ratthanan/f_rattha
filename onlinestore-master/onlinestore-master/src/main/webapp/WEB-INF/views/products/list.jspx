@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_roo_team01_domain_Product" items="${products}" z="g5PfbEEXHnTzov1MWQPi7rFHFlE=">
+        <table:table data="${products}" id="l_com_roo_team01_domain_Product" path="/products" z="NYYsHDb3DAuaI7FVWXd6fivUFfc=">
+            <table:column id="c_com_roo_team01_domain_Product_name" property="name" z="jzYXYmkE9thqzRUcaKfK5W03igI="/>
+            <table:column id="c_com_roo_team01_domain_Product_price" property="price" z="iD/WYH8v0nNaMMn9BszN4INp5yw="/>
+            <table:column id="c_com_roo_team01_domain_Product_detail" property="detail" z="+UviISp8n2c6eLvmfI//gfYmkkg="/>
+            <table:column id="c_com_roo_team01_domain_Product_amount" property="amount" z="+6Efms5fhXXaPPV6YJHo/5uOI6E="/>
+            <table:column id="c_com_roo_team01_domain_Product_proStatus" property="proStatus" z="l9mFgeIbj0qON1xAHW9KjmFKVNo="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_roo_team01_domain_PreOrder" items="${preorders}" z="tMZXAWAR7VK6+xqWHIM/Tk4h494=">
+        <table:table data="${preorders}" id="l_com_roo_team01_domain_PreOrder" path="/preorders" z="8R1Y3r/X19Mb1YJSpRfOvWlfUdQ=">
+            <table:column id="c_com_roo_team01_domain_PreOrder_name" property="name" z="xN8v13ILx5+5hFPBRdKO4PudO2M="/>
+            <table:column id="c_com_roo_team01_domain_PreOrder_amount" property="amount" z="zFBscKmkIebD0wv9tJFJJKORJ3A="/>
+            <table:column id="c_com_roo_team01_domain_PreOrder_dates" property="dates" z="VFb+KfsesCHS+/FG3ZbRRbo/kGU="/>
+            <table:column id="c_com_roo_team01_domain_PreOrder_status" property="status" z="TFgLw9f3D1RGbCWPfctqJ2KTNyg="/>
+            <table:column id="c_com_roo_team01_domain_PreOrder_uname" property="uname" z="YjWNGyWcs5epuIEImxzX94axVYk="/>
+        </table:table>
+    </page:list>
+</div>

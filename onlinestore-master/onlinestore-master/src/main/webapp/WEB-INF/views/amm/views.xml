@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+  <definition name="amm/add" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/amm/add.jspx" />
+  </definition>
+
+  <definition name="amm/show" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/amm/show.jspx" />
+  </definition>
+
+   <definition name="amm/viewUser" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/amm/viewUser.jspx" />
+  </definition>
+
+ <definition name="amm/check" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/amm/check.jspx" />
+  </definition>
+
+</tiles-definitions>

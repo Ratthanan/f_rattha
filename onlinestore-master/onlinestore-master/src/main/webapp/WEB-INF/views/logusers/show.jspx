@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_roo_team01_domain_LogUser" object="${loguser}" path="/logusers" z="6KRlWH7Q6zYJ1XdRnRO7UPBe4iM=">
+        <field:display field="username" id="s_com_roo_team01_domain_LogUser_username" object="${loguser}" z="FPS+dN0VnS5NlNEJNgTjtJ6H2AM="/>
+        <field:display field="password" id="s_com_roo_team01_domain_LogUser_password" object="${loguser}" z="6AAny5wip/BOYBeviYj8d1sl2XU="/>
+        <field:display field="firstname" id="s_com_roo_team01_domain_LogUser_firstname" object="${loguser}" z="9G/BWYdfX7N2PlY5gxnvmkUV1PM="/>
+        <field:display field="lastname" id="s_com_roo_team01_domain_LogUser_lastname" object="${loguser}" z="a8eiaEERJGumS2ItGsjh/dGPFzk="/>
+        <field:display field="phone" id="s_com_roo_team01_domain_LogUser_phone" object="${loguser}" z="pouRx7+NE/PUeqsLICIULwWxF5E="/>
+        <field:display field="address" id="s_com_roo_team01_domain_LogUser_address" object="${loguser}" z="lKzwi1y94CHL9KOxN80Nf/SEEcM="/>
+        <field:display field="roles" id="s_com_roo_team01_domain_LogUser_roles" object="${loguser}" z="xwOLOOXnhFzov7V9Y+YFC0S9qXg="/>
+        <field:display field="enabled" id="s_com_roo_team01_domain_LogUser_enabled" object="${loguser}" z="6FWd1K1Dg8kI5XFZVSs3yJ4Q/Rw="/>
+    </page:show>
+</div>

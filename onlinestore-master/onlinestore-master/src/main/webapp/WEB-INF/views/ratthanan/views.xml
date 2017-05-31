@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+  <definition name="fluwe/add" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/ratthanan/add.jspx" />
+  </definition>
+
+  <definition name="fluwe/show" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/ratthanan/show.jspx" />
+  </definition>
+
+  <definition name="fluwe/showadmin" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/ratthanan/showadmin.jspx" />
+  </definition>
+
+  <definition name="fluwe/padd" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/ratthanan/padd.jspx" />
+  </definition>
+
+   <definition name="fluwe/pshow_admin" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/ratthanan/pshow_admin.jspx" />
+  </definition>
+
+   <definition name="fluwe/pshow" extends="headpage">
+    <put-attribute name="body" value="/WEB-INF/views/ratthanan/pshow.jspx" />
+  </definition>
+
+</tiles-definitions>

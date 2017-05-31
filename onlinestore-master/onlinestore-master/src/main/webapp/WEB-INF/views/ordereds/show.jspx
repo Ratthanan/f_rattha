@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_roo_team01_domain_Ordered" object="${ordered}" path="/ordereds" z="/Rki2RrXWG2wUapShfkrimbFJwg=">
+        <field:display field="amount" id="s_com_roo_team01_domain_Ordered_amount" object="${ordered}" z="SinRdTAYQbl0uMMokVI0SciWj40="/>
+        <field:display field="customer" id="s_com_roo_team01_domain_Ordered_customer" object="${ordered}" z="UBICMXKr834UmaKD/Jb0zFcYDjg="/>
+        <field:display field="status" id="s_com_roo_team01_domain_Ordered_status" object="${ordered}" z="QZyFmxUCBwUaCkLo8ift40C/EG8="/>
+        <field:display field="num" id="s_com_roo_team01_domain_Ordered_num" object="${ordered}" z="1uNHq2ukDjifwPHXbDLIwdmQQkU="/>
+        <field:display field="products" id="s_com_roo_team01_domain_Ordered_products" object="${ordered}" z="6oRmQEasqkdRQmgAZkOB44p2LDQ="/>
+        <field:display field="sendBy" id="s_com_roo_team01_domain_Ordered_sendBy" object="${ordered}" z="aCoAUJsgiwU9r44PROwloR/einI="/>
+        <field:display field="warringStatus" id="s_com_roo_team01_domain_Ordered_warringStatus" object="${ordered}" z="TJ5zfI+htl28QfAEZrE7+gh1ZyM="/>
+    </page:show>
+</div>

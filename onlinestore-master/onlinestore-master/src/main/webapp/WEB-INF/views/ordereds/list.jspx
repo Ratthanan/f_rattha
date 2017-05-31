@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_roo_team01_domain_Ordered" items="${ordereds}" z="oVBmniHlIwsGe3c6QgCjTSRzR5o=">
+        <table:table data="${ordereds}" id="l_com_roo_team01_domain_Ordered" path="/ordereds" z="It2m6/aXEvVxuas7s/OJgHB/Xoc=">
+            <table:column id="c_com_roo_team01_domain_Ordered_amount" property="amount" z="37ugjWwCkV1K3U9l9+2EcLtacVM="/>
+            <table:column id="c_com_roo_team01_domain_Ordered_customer" property="customer" z="ScQzYBbGTF298UJXo0QQ3KmBVEQ="/>
+            <table:column id="c_com_roo_team01_domain_Ordered_status" property="status" z="xN1auCwyT1bpBAH4FlUsgIbOWGU="/>
+            <table:column id="c_com_roo_team01_domain_Ordered_num" property="num" z="xEORw8X4yIRjYEYovbOBDGuXRSs="/>
+            <table:column id="c_com_roo_team01_domain_Ordered_products" property="products" z="QVqaWkshptwOHwvP3v0sk8GXfBk="/>
+            <table:column id="c_com_roo_team01_domain_Ordered_sendBy" property="sendBy" z="lpVmdyIauc++H/erMvzSfgLdFyc="/>
+        </table:table>
+    </page:list>
+</div>

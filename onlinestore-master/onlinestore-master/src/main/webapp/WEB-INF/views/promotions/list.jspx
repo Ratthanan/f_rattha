@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_roo_team01_domain_Promotion" items="${promotions}" z="GI6ZjtXnw2+dg15eaZ+9vJygTFk=">
+        <table:table data="${promotions}" id="l_com_roo_team01_domain_Promotion" path="/promotions" z="v3JMGuW12WBxisuKX5FAS9sd5zw=">
+            <table:column id="c_com_roo_team01_domain_Promotion_name" property="name" z="8lPWr/w3Vmii3sRFAZw6HrJ9ioI="/>
+            <table:column id="c_com_roo_team01_domain_Promotion_detail" property="detail" z="/1QGEV9zP06UTyN3CVdavMVfYHc="/>
+            <table:column id="c_com_roo_team01_domain_Promotion_discount" property="discount" z="534A2J+LXeQUu+veDNhwHa/meDY="/>
+            <table:column id="c_com_roo_team01_domain_Promotion_price" property="price" z="vHb8T7WYpTesSOyH9/e70LdvvLM="/>
+        </table:table>
+    </page:list>
+</div>
